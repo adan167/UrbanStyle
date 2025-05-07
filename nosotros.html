@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UrbanStyle - Nosotros</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    </head>
+<body class="bg-gray-100 font-sans">
+
+    <nav class="bg-gray-900 text-white p-4 shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="../index.html" class="text-2xl font-bold tracking-tight">UrbanStyle</a>
+            <div class="hidden md:flex space-x-6">
+                <a href="../index.html" class="hover:text-yellow-400 transition duration-300">Inicio</a>
+                <a href="productos.html" class="hover:text-yellow-400 transition duration-300">Productos</a>
+                <a href="nosotros.html" class="text-yellow-400 transition duration-300">Nosotros</a>
+                <a href="contacto.html" class="hover:text-yellow-400 transition duration-300">Contacto</a>
+            </div>
+             <a href="carrito.html" class="relative hover:text-yellow-400 transition duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                </svg>
+                <span id="cart-icon-count" class="absolute -top-2 -right-2 bg-yellow-400 text-gray-900 text-xs rounded-full h-5 w-5 flex items-center justify-center">0</span>
+            </a>
+            <div class="md:hidden">
+                <button id="menu-btn" class="text-white focus:outline-none">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden">
+            <a href="../index.html" class="block py-2 px-4 text-sm hover:bg-gray-700">Inicio</a>
+            <a href="productos.html" class="block py-2 px-4 text-sm hover:bg-gray-700">Productos</a>
+            <a href="nosotros.html" class="block py-2 px-4 text-sm hover:bg-gray-700">Nosotros</a>
+            <a href="contacto.html" class="block py-2 px-4 text-sm hover:bg-gray-700">Contacto</a>
+             <a href="carrito.html" class="block py-2 px-4 text-sm hover:bg-gray-700">Carrito</a> </div>
+    </nav>
+
+    <main>
+         <div id="notification-area" class="fixed top-4 right-4 z-50 w-full max-w-xs">
+            </div>
+
+        <section class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">Sobre Nosotros</h2>
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <h3 class="text-2xl font-semibold text-gray-700 mb-4">Nuestra Historia</h3>
+                        <p class="text-gray-600 leading-relaxed mb-6 text-justify">
+                            Fundada en el corazón de la ciudad en 2020, UrbanStyle nació de la pasión por la cultura callejera y la autoexpresión. Comenzamos como un pequeño colectivo de diseñadores y artistas urbanos con el sueño de crear ropa que no solo se viera bien, sino que también contara una historia. Creemos que la moda es una forma poderosa de identidad y nos esforzamos por ofrecer prendas auténticas que resuenen con la energía vibrante de las calles. Cada colección está inspirada en el arte, la música y el movimiento constante de la vida urbana, buscando siempre la innovación sin perder la esencia que nos define. Hoy, UrbanStyle sigue creciendo, comprometida con la calidad, la originalidad y nuestra comunidad, llevando el espíritu urbano a cada rincón del mundo, una prenda a la vez, fomentando un estilo de vida audaz y sin disculpas.
+                        </p>
+                        <div class="mb-6">
+                            <h4 class="text-xl font-semibold text-gray-700 mb-2">Misión</h4>
+                            <p class="text-gray-600 leading-relaxed">
+                                Nuestra misión es democratizar la moda urbana, ofreciendo prendas accesibles y de alta calidad que permitan a cada individuo expresar su personalidad única. Nos dedicamos a fusionar tendencias contemporáneas con la autenticidad de la cultura callejera, garantizando que cada pieza sea cómoda, duradera y represente el espíritu audaz de la juventud. Buscamos construir una comunidad global donde la creatividad y la individualidad sean celebradas a través del estilo.
+                            </p>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-semibold text-gray-700 mb-2">Visión</h4>
+                            <p class="text-gray-600 leading-relaxed">
+                                Aspiramos a ser la marca líder mundial en moda urbana sostenible, reconocida por nuestra innovación en diseño, nuestro compromiso con prácticas éticas y ecológicas, y por empoderar a nuestra comunidad a través del estilo. Visualizamos un futuro donde la moda urbana no solo marque tendencias, sino que también inspire un cambio positivo, demostrando que es posible vestir con estilo mientras cuidamos nuestro planeta y a las personas que lo habitan.
+                            </p>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-semibold text-gray-700 mb-4 text-center md:text-left">Organigrama</h3>
+                        <img src="../imagenes/organigrama-rrhh-horizontal.jpg" alt="Organigrama de UrbanStyle" class="w-full max-w-md mx-auto rounded-lg shadow-md">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-900 text-gray-400 py-12">
+        <div class="container mx-auto px-4 text-center">
+            <p>© <span id="currentYear"></span> UrbanStyle. Todos los derechos reservados.</p>
+            <p class="text-sm">Diseñado con <span class="text-yellow-400">♥</span> y Tailwind CSS</p>
+            <div class="mt-4">
+                 <a href="https://www.facebook.com/tuurbanstyle" class="px-2 hover:text-yellow-400">Facebook</a>
+                <a href="https://www.instagram.com/tuurbanstyle" class="px-2 hover:text-yellow-400">Instagram</a>
+                <a href="https://twitter.com/tuurbanstyle" class="px-2 hover:text-yellow-400">Twitter</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <audio id="musica" loop>
+        <source src="audio/música para restobartienda de ropa 2020  Love (Edición Vocal)🔊🎧💣🔥💣🔥💣.mp3" type="audio/mpeg">
+        Tu navegador no soporta el elemento de audio.
+      </audio>
+      
+      <script>
+        window.addEventListener('load', function () {
+          var audio = document.getElementById("musica");
+          audio.play().catch(function(error) {
+            console.log("El navegador bloqueó la reproducción automática. El usuario debe interactuar primero.");
+          });
+        });
+      </script>
+</body>
+</html>

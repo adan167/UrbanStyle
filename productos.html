@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UrbanStyle - Productos</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Puedes añadir aquí cualquier estilo adicional si lo necesitas */
+    </style>
+</head>
+<body class="bg-gray-100 font-sans">
+
+    <nav class="bg-gray-900 text-white p-4 shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="../index.html" class="text-2xl font-bold tracking-tight">UrbanStyle</a>
+            <div class="hidden md:flex space-x-6">
+                <a href="../index.html" class="hover:text-yellow-400 transition duration-300">Inicio</a>
+                <a href="productos.html" class="text-yellow-400 transition duration-300">Productos</a>
+                <a href="nosotros.html" class="hover:text-yellow-400 transition duration-300">Nosotros</a>
+                <a href="contacto.html" class="hover:text-yellow-400 transition duration-300">Contacto</a>
+            </div>
+            <a href="carrito.html" class="relative hover:text-yellow-400 transition duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                </svg>
+                <span id="cart-icon-count" class="absolute -top-2 -right-2 bg-yellow-400 text-gray-900 text-xs rounded-full h-5 w-5 flex items-center justify-center">0</span>
+            </a>
+            <div class="md:hidden">
+                <button id="menu-btn" class="text-white focus:outline-none">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden">
+            <a href="../index.html" class="block py-2 px-4 text-sm hover:bg-gray-700">Inicio</a>
+            <a href="productos.html" class="block py-2 px-4 text-sm hover:bg-gray-700">Productos</a>
+            <a href="nosotros.html" class="block py-2 px-4 text-sm hover:bg-gray-700">Nosotros</a>
+            <a href="contacto.html" class="block py-2 px-4 text-sm hover:bg-gray-700">Contacto</a>
+             <a href="carrito.html" class="block py-2 px-4 text-sm hover:bg-gray-700">Carrito</a> </div>
+    </nav>
+
+    <main>
+        <section class="py-16 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">Nuestros Productos</h2>
+
+                <div class="flex justify-center space-x-4 mb-10">
+                    <button class="filter-btn bg-gray-700 text-white py-2 px-6 rounded-lg hover:bg-gray-600 transition duration-300" data-filter="all">Todos</button>
+                    <button class="filter-btn bg-gray-200 text-gray-700 py-2 px-6 rounded-lg hover:bg-gray-300 transition duration-300" data-filter="hombres">Hombres</button>
+                    <button class="filter-btn bg-gray-200 text-gray-700 py-2 px-6 rounded-lg hover:bg-gray-300 transition duration-300" data-filter="mujeres">Mujeres</button>
+                    <button class="filter-btn bg-gray-200 text-gray-700 py-2 px-6 rounded-lg hover:bg-gray-300 transition duration-300" data-filter="accesorios">Accesorios</button>
+                </div>
+
+                <div id="product-gallery" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+                    <div class="product-card bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105" data-category="hombres" data-id="P001" data-name="Camiseta Gráfica 'Street Vibe'" data-price="25.00" data-image="imagenes/camiseta callejera.jpg">
+                        <img src="imagenes/camiseta callejera.jpg" alt="Camiseta Urbana Hombre" class="w-full h-64 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Camiseta Gráfica "Street Vibe"</h3>
+                            <p class="text-gray-600 text-lg mb-4">$25.00</p>
+                            <button class="w-full bg-gray-900 text-white py-2 px-4 rounded-lg hover:bg-gray-700 transition duration-300 add-to-cart-btn">
+                                Agregar al carrito
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="product-card bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105" data-category="accesorios" data-id="P002" data-name="Gorra Snapback 'Urban Classic'" data-price="18.00" data-image="imagenes/gorra.jpg">
+                        <img src="imagenes/gorra.jpg" alt="Gorra Urbana" class="w-full h-64 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Gorra Snapback "Urban Classic"</h3>
+                            <p class="text-gray-600 text-lg mb-4">$18.00</p>
+                            <button class="w-full bg-gray-900 text-white py-2 px-4 rounded-lg hover:bg-gray-700 transition duration-300 add-to-cart-btn">
+                                Agregar al carrito
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="product-card bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105" data-category="mujeres" data-id="P003" data-name="Pantalón Cargo 'Explorer'" data-price="45.00" data-image="imagenes/pantalon.jpg">
+                        <img src="imagenes/pantalon.jpg" alt="Pantalón Cargo Mujer" class="w-full h-64 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Pantalón Cargo "Explorer"</h3>
+                            <p class="text-gray-600 text-lg mb-4">$45.00</p>
+                            <button class="w-full bg-gray-900 text-white py-2 px-4 rounded-lg hover:bg-gray-700 transition duration-300 add-to-cart-btn">
+                                Agregar al carrito
+                            </button>
+                        </div>
+                    </div>
+
+                     <div class="product-card bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105" data-category="mujeres" data-id="P004" data-name="Camiseta Oversize 'City Lights'" data-price="28.00" data-image="imagenes/oversize.jpg">
+                        <img src="imagenes/oversize.jpg" alt="Camiseta Urbana Mujer" class="w-full h-64 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Camiseta Oversize "City Lights"</h3>
+                            <p class="text-gray-600 text-lg mb-4">$28.00</p>
+                            <button class="w-full bg-gray-900 text-white py-2 px-4 rounded-lg hover:bg-gray-700 transition duration-300 add-to-cart-btn">
+                                Agregar al carrito
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="product-card bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105" data-category="hombres" data-id="P005" data-name="Sudadera con Capucha 'Night Skyline'" data-price="55.00" data-image="imagenes/sudadera-hombre.jpg">
+                        <img src="imagenes/sudadera.jpg" alt="Sudadera Urbana Hombre" class="w-full h-64 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Sudadera "Night Skyline"</h3>
+                            <p class="text-gray-600 text-lg mb-4">$55.00</p>
+                            <button class="w-full bg-gray-900 text-white py-2 px-4 rounded-lg hover:bg-gray-700 transition duration-300 add-to-cart-btn">
+                                Agregar al carrito
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="product-card bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105" data-category="mujeres" data-id="P006" data-name="Falda Plisada 'Metro Flow'" data-price="35.00" data-image="imagenes/falda-mujer.jpg">
+                        <img src="imagenes/falda.jpg" alt="Falda Urbana Mujer" class="w-full h-64 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Falda Plisada "Metro Flow"</h3>
+                            <p class="text-gray-600 text-lg mb-4">$35.00</p>
+                            <button class="w-full bg-gray-900 text-white py-2 px-4 rounded-lg hover:bg-gray-700 transition duration-300 add-to-cart-btn">
+                                Agregar al carrito
+                            </button>
+                        </div>
+                    </div>
+
+                     <div class="product-card bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105" data-category="accesorios" data-id="P007" data-name="Mochila 'Commuter Pack'" data-price="40.00" data-image="imagenes/mochila-unisex.jpg">
+                        <img src="imagenes/mochila.jpg" alt="Mochila Urbana" class="w-full h-64 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Mochila "Commuter Pack"</h3>
+                            <p class="text-gray-600 text-lg mb-4">$40.00</p>
+                            <button class="w-full bg-gray-900 text-white py-2 px-4 rounded-lg hover:bg-gray-700 transition duration-300 add-to-cart-btn">
+                                Agregar al carrito
+                            </button>
+                        </div>
+                    </div>
+
+                     <div class="product-card bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105" data-category="hombres" data-id="P008" data-name="Chaqueta Bomber 'Alley Cat'" data-price="70.00" data-image="imagenes/chaqueta-hombre.jpg">
+                        <img src="imagenes/bomber.jpg" alt="Chaqueta Bomber Urbana" class="w-full h-64 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Chaqueta Bomber "Alley Cat"</h3>
+                            <p class="text-gray-600 text-lg mb-4">$70.00</p>
+                            <button class="w-full bg-gray-900 text-white py-2 px-4 rounded-lg hover:bg-gray-700 transition duration-300 add-to-cart-btn">
+                                Agregar al carrito
+                            </button>
+                        </div>
+                    </div>
+
+                    </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-900 text-gray-400 py-12">
+        <div class="container mx-auto px-4 text-center">
+            <p>© <span id="currentYear"></span> UrbanStyle. Todos los derechos reservados.</p>
+            <p class="text-sm">Diseñado con <span class="text-yellow-400">♥</span> y Tailwind CSS</p>
+            <div class="mt-4">
+                <a href="https://www.facebook.com/tuurbanstyle" class="px-2 hover:text-yellow-400">Facebook</a>
+                <a href="https://www.instagram.com/tuurbanstyle" class="px-2 hover:text-yellow-400">Instagram</a>
+                <a href="https://twitter.com/tuurbanstyle" class="px-2 hover:text-yellow-400">Twitter</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <audio id="musica" loop>
+        <source src="audio/música para restobartienda de ropa 2020  Love (Edición Vocal)🔊🎧💣🔥💣🔥💣.mp3" type="audio/mpeg">
+        Tu navegador no soporta el elemento de audio.
+      </audio>
+      
+      <script>
+        window.addEventListener('load', function () {
+          var audio = document.getElementById("musica");
+          audio.play().catch(function(error) {
+            console.log("El navegador bloqueó la reproducción automática. El usuario debe interactuar primero.");
+          });
+        });
+      </script>
+</body>
+</html>
